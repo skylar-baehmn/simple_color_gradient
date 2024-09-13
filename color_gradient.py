@@ -23,8 +23,8 @@ def get_color_gradient(rgb1, rgb2, number_of_steps):
 
     ## now for number of steps, we will get the value of the gradient by doing x% of rgb1 and y% of rgb2
     for i in range(0, number_of_steps):
-        rgb1_at_step = [r1 * rgb1_step_percent, g1 * rgb1_step_percent, b1 * rgb1_step_percent]
-        rgb2_at_step = [r2 * rgb2_step_percent, g2 * rgb2_step_percent, b2 * rgb2_step_percent]
+        rgb1_at_step = [int(r1 * rgb1_step_percent), int(g1 * rgb1_step_percent), int(b1 * rgb1_step_percent)]
+        rgb2_at_step = [int(r2 * rgb2_step_percent), int(g2 * rgb2_step_percent), int(b2 * rgb2_step_percent)]
         rgb_at_step = [rgb1_at_step[0] + rgb2_at_step[0], rgb1_at_step[1] + rgb2_at_step[1], rgb1_at_step[2] + rgb2_at_step[2]]
         rgb_gradient_arr.append(rgb_at_step)
 
